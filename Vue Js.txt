@@ -1,0 +1,95 @@
+####### VUE JS #######
+
+Vue.js is a javascript framework for building user interfaces or single page application. The core vue library is focused on doing one thing which is building user interfaces. 
+
+Vue alone does not focus on the other aspects of application like routing or HTTP requests, But Vue has a rich eco system of other powerful libraries that we can integrate with Vue such as " Vuex for complex state management ", " Vue router for routing ", " Vuetify for UI elements " etc.
+
+Vue is still called a framework even though you install routing/state tools separately becase ::
+
+1. Framework ≠ Monolithic
+
+A framework provides structure, conventions, and a standard way to build apps. It doesn’t have to include everything by default. Vue gives you a "complete solution" through official packages (like Vue Router & Pinia), which are:
+
+Maintained by the Vue core team
+Designed to fit together seamlessly
+Follow the same philosophy and patterns
+
+2. Opinionated architecture
+
+Vue guides how you structure components, handle reactivity, organize your app, etc. This guidance and integration across tools is what makes it a framework.
+
+3. Modular by design = Progressive Framework
+
+Vue is called a progressive framework because:
+
+You can start small (just the core Vue).
+Then progressively add features (router, state, etc.) without rewriting your code.
+This makes Vue flexible for both small widgets and large SPAs.
+
+
+##### WHY LEARN VUE JS #####
+
+Vue.js has 3rd most starred github repo in the world, Means thousands of developers around the world enjoy working with vue, As a result we are going to find solutions to most of the problems that we face easily because of huge community of vue.js.
+
+1. Vue is approachable
+
+Prequist for vue.js are only html, css and js. It provides vue devtools which gives insight into our apps, Vue cli with which we can quickly scaffold and manage projects. Vue has a component based architecture just like react for code reusability.
+
+2. Vue is versatile
+
+Can work as both library ( Allows to download other js packages on it ) or framework ( Use built-in or vue own ecosystem packages )
+
+3. Vue is performant
+
+Vue measures just 33kb minified and gzipped at runtime, Also because of virtual DOM only necessary pieces in the DOM are updated which results in better performance. 
+
+Vue is a framework built by taking the good parts from a lot of other libraries and frameworks and then improving where necessary. 
+
+
+###### VUE.JS EXTENSION #######
+
+Vetur ( It provides syntax highlighting, code snippets, linting and formatting support etc. )
+
+
+####### 1st VUE PROJECT #######
+
+There are 4 different ways to add vue to the project ::
+
+1. Include vue as a CDN package using js " <script src> " tag. 
+
+Good when we want to incorporate vue into a really old legacy code base where some parts of the ui will be enhanced by vue or when we want to quickly prototype something for learning purpose 
+
+2. Using npm package manager by command " npm install vue " ( PREFERED APROACH )
+
+Recommended approach for building large scale vue.js application but then we have to manually do a lot of config work like setting up linters, formaters, hot reloading, webpack, build scripts etc. 
+
+3. Using vue cli for creating spa vue js application, " npm install -g @vue/cli " and " vue create <project-name> " by running these 2 commands we have vue js project up and running. Vue cli uses webpack under the hood
+
+Takes only a few minutes to get up and running with hot-reload, lint-on-save, and production ready builds. 
+
+4. Using vite which is a web dev build tool that serves our code via native ES module imports that is esBuild bundler during dev and bundles it with rollup bundler for production. Because of ES module aproach our code is served at lightining fast speed and get instant hot module replacement. 
+
+" npm create vite@latest <project-name> " which will then promt to choose framework which is vue.js in our case
+
+Here we will use 3rd aproach which is " VUE CLI ", by command "npm install -g @vue/cli" and "vue create hello" to create "hello" vue project. To know vue cli version command "vue --version".
+
+To run our project command " npm run serve " from package.json and it uses " webpack-dev-server (dev) " and " webpack (prod) " behind the scene
+
+
+###### FOLDER STRUCTURE #######
+
+1. Package.json => It contains 3 default command under scripts section "serve" (To run application in dev mode), "build" (To create production ready build of the application) and "lint" (To fix any linting error in the app)
+
+The configuration of esLint is also present in same package.json file under "eslintConfig" section
+
+2. Public Folder => It contains static assets that we want to get published and available to end user when going live / hosted. Contains atleast a "index.html" file 
+
+3. Src Folder => It is the folder we will be working with most during the development. 
+
+ (a). The starting / entry point of vue.js app is "main.js" file, 
+
+
+
+
+
+
