@@ -48,7 +48,7 @@ Vue is a framework built by taking the good parts from a lot of other libraries 
 
 ###### VUE.JS EXTENSION #######
 
-Vetur ( It provides syntax highlighting, code snippets, linting and formatting support etc. )
+"Vetur" ( It provides syntax highlighting, code snippets, linting and formatting support etc. ) and nowadays new extension called "Vue" is getting used
 
 
 ####### 1st VUE PROJECT #######
@@ -86,7 +86,31 @@ The configuration of esLint is also present in same package.json file under "esl
 
 3. Src Folder => It is the folder we will be working with most during the development. 
 
- (a). The starting / entry point of vue.js app is "main.js" file, 
+ (a). The starting / entry point of vue.js app is "main.js" file 
+
+ (b). components folder => It contains reusable UI elements or components. 
+
+ (c). assets folder => It contains static files like images, fonts, icons etc. Webpack/Vite will handle importing them (e.g., @/assets/logo.png).
+
+When we run command "npm run serve" the "index.html" file will be served in the browser which contains a root dom node with id="app". In main.js file the "createApp()" function will mount the root "App" component into that dom with id="app". 
+
+The "App" components contains its own html, css and js which corresponds to particular view / portion of the whole app
+
+4. SINGLE FILE COMPONENT (SFC) .vue => It’s a special file format that lets you define the template (HTML), script (JavaScript/TypeScript), and style (CSS) of a portion of ui in a single file. 
+
+A .vue file contains everything a component or portion of ui needs ::
+
+ (a). HTML structure (template) 
+ (b). Behaviour, logic and functionality (script) 
+ (c). Style related to html under the template (style) 
+
+So unlike in react dividing the portion of ui into layers like jsx (html + js) and css (style) and then import or join them together to form a ui, In vue a single .vue file will describe the whole html, css and js of portion of ui.
+
+But browser does not understand a .vue file similar to way .jsx file for this webpack with vue-loader is used to convert .vue files into plain js files that it can understand, Similar to way babel-loader is used to convert jsx into js for react.
+
+5. A major portion of working with .vue file is wiring up data and the logic present in script block to the html present in template block. For data binding we use " vue component defination using ptions api "
+
+6. 
 
 
 
