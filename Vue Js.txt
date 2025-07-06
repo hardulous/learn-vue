@@ -110,10 +110,26 @@ But browser does not understand a .vue file similar to way .jsx file for this we
 
 5. A major portion of working with .vue file is wiring up data and the logic present in script block to the html present in template block. For data binding we use " vue component defination using ptions api "
 
-6. 
+6. When building web app we often needs to show or hide some ui elements based on certain conditions, For this vue js provide us 4 directives name, "v-if", "v-else", "v-else-if" and "v-show".
 
+7. When building web app we often needs to show list of items like list of names, products, courses etc. It means repeating a html element or set of html elements in the DOM. For this vue js provide us with v-for directive.
 
+8. Most of the time in web app we execute some functions when something happen ex, user event, interaction with wep app, after some operation is done etc. For these we define those function inside "methods" object property of same export default component options object in <script> tag
 
+9. In web app most of the time we handle form or user inputs like, Capturing user inputs, Textareas, single or multi-select control, Checkbox, Checkbox group, Radio and once capture the user inputs have to handle form submit.
 
+Long short story in vue js we can create CONTROLLED COMPONENT as well just like in react but way is different ::
+
+In vue each portion of ui is represented by a .vue file which consist of mainly <template> and <script> block, When we create a controlled component it means capturing data from user to process later on. In vue file form controls are present in <template> block and corresponding data in <script> block. When user fill the data in form <template> we need a way to propagate that data into to <script> block, And if there is already exist data in <script> block propagate it to <template> block. 
+
+So we need our <template> and <script> to be in sync with each other. 
+
+10.  Vue js provide us with modifiers to directives (like @click, v-model, v-on, etc.) to extend or tweak their behavior — without writing extra code
+
+11. So far in order to display data in ui we have STATIC HTML, BINDING DATA USING TEXT INTERPOLATION, JS EXPRESSION INSIDE MUSTACHE SYNTAX, NETHODS THAT RETURN VALUE TO BE RENDERED IN THE UI. Now another way to display data in ui is COMPUTED PROPERTIES. 
+
+12. Just like in react we have useEffect() hook to execute some code/side effects after initial render or when any value in dependency array changes, Similarly in vue we have WATCHER. 
+
+13. 
 
 

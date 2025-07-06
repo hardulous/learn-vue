@@ -1,5 +1,6 @@
 <template>
 
+  <h1>BINDING DATA</h1>
   <!-- <div>{{ greet }} {{ name }}</div> -->
   <div>{{ greet + " " + name }}</div>
 
@@ -42,9 +43,9 @@
 
 <script>
 
-// The below export default object is called 
+// The below export default object is called component options object or more specifically the options API component defination. 
 export default {
-  name: "App",
+  name: "BINDING DATA",
 
   // The below data() is used to define the reactive state (data properties) of the Vue component, It returns an object that contains the component’s reactive data properties, 
   data() {
@@ -82,14 +83,6 @@ export default {
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
 
 /* Classes for binding */
 .underline {
