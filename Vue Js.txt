@@ -48,7 +48,7 @@ Vue is a framework built by taking the good parts from a lot of other libraries 
 
 ###### VUE.JS EXTENSION #######
 
-"Vetur" ( It provides syntax highlighting, code snippets, linting and formatting support etc. ) and nowadays new extension called "Vue" is getting used
+"Vetur" ( It provides syntax highlighting, code snippets, linting and formatting support etc. ) and nowadays new extension called "Vue" is getting used, Vue VSCode Snippets. 
 
 
 ####### 1st VUE PROJECT #######
@@ -130,6 +130,10 @@ So we need our <template> and <script> to be in sync with each other.
 
 12. Just like in react we have useEffect() hook to execute some code/side effects after initial render or when any value in dependency array changes, Similarly in vue we have WATCHER. 
 
-13. 
+Just like useEffect() hook can work as 'componentDidMount' and behave differently for reference type state, The watcher can also replicate same behaviour using 'immediate' and 'deep' watcher features.
 
+13. Similar to react vue follows component architecture that lets you break your application into reusable, isolated pieces with their own logic and templates.
 
+In vue js component code is present in .vue file and can contain <template>, <script> and <style> block which describes a portion of ui.
+
+Just like in react in order to make component resuable we make it dynamic using props and using props a same component can show different ui, Same props can be used in vue js as well using options API. 
