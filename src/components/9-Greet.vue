@@ -1,5 +1,7 @@
 <template>
     <h2>Hello {{ name }} a.k.a {{ heroName }}</h2>
+    <h2>Hello {{ name?.toUpperCase() }} a.k.a {{ heroName }}</h2>
+    <h2>Published - {{ isPublished ? 'Yes' : 'No' }}</h2>
 </template>
 
 <script>
@@ -7,7 +9,17 @@
 export default {
     // eslint-disable-next-line vue/multi-word-component-names
     name: 'Greet',
-    props:['name', 'heroName']  // This component can accept the name prop from parent component  
+    // props:['name', 'heroName']  // This component can accept the name prop from parent component 
+    props:{
+     // Now mention the type of props
+     name: String,
+     heroName:{
+        type: String,
+        required: true,
+        default: 'Shaktiman' // If prop not passed this value will be used
+     },
+     isPublished:Boolean
+    } 
 }
 </script>
 
@@ -48,5 +60,9 @@ Then 2nd start using props in <template> or <script> just like we use any reacti
 @@@@
 
 Here sometime to avoid runtime error it is good to mention what type a particular prop is ex, If any other dev comes to this component he only sees that this component accept 2 props 'name' and 'heroName' but does not know its type. So for this we can also pass props as an object where key is prop name and value is prop type. 
+
+Since vue now knows the type of props at compile time so we will get autosuggestion on props as well. And will get warning if didn't pass the prop validation.  
+
+Just like in react we can also pass default value of props if not passed and other property like required, validation function etc.
 
 -->

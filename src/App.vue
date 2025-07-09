@@ -28,11 +28,18 @@
   <!-- <Greet/> -->
 
   <!-- COMPONENT PROPS -->
-  <Greet name="Aman Bisht" heroName="Batman" />
+  <!-- <Greet name="Aman Bisht" heroName="Batman" />
   <Greet name="Mayank Tanwar" heroName="Punisher" />
-  <Greet name="Tarun Sharma" hero-name="Muse" />
+  <Greet name="Tarun Sharma" hero-name="Muse" /> -->
   <!-- DYNAMIC PROPS -->
-  <Greet :name="name" :heroName="channel" />
+  <!-- <Greet :name="name" />
+  <Greet :name="name" :hero-name="'SpiderMan'" :isPublished="true"/> -->
+
+  <!-- NON-PROP ATTRIBUTE -->
+  <!-- <NonPropAttribute name="Aman Bisht" :age="23" id="Non-Prop" data-test="Test" :style="{color:'red'}"/> -->
+
+  <!-- PROVIDE AND INJECT -->
+  <ProvideAndInject/>
 
 </template>
 
@@ -45,8 +52,9 @@
 // import Modifiers from './components/6-Modifiers.vue';
 // import ComputedProperties from './components/7-Computed Properties.vue';
 // import Watcher from './components/8-Watcher.vue';
-import Greet from './components/9-Greet.vue';
-
+// import Greet from './components/9-Greet.vue';
+// import NonPropAttribute from './components/10-Non Props Attribute.vue'
+import ProvideAndInject from './components/11-Provide And Inject.vue'
 export default {
   name: 'App',
 
@@ -60,7 +68,9 @@ export default {
     // Modifiers,
     // ComputedProperties,
     // Watcher,
-    Greet        // local registering a component for use in <template>
+    // Greet        // local registering a component for use in <template>
+    // NonPropAttribute,
+    ProvideAndInject
   },
   data() {
     return {
@@ -92,6 +102,10 @@ Here in order to register a component we use 'component' property of options api
 Just like in react components props can be used or passed in vue components as well. 
 
 Here we can also pass dynamic value that is data or computed properties as prop not only static value as props. Using 'v-bind' directive.
+
+To pass js value as a prop passed them using 'v-bind' syntax ':prop-name:"js value to pass"', unlike in react we pass js value as props using 'props-name={js value}'.
+
+
 
 
 

@@ -137,3 +137,5 @@ Just like useEffect() hook can work as 'componentDidMount' and behave differentl
 In vue js component code is present in .vue file and can contain <template>, <script> and <style> block which describes a portion of ui.
 
 Just like in react in order to make component resuable we make it dynamic using props and using props a same component can show different ui, Same props can be used in vue js as well using options API. 
+
+14. Just like in react we have Context Api to avoid prop drilling for deeply nested components and directly pass data to them in vue we have Provide and Inject for the same. 
