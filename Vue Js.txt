@@ -139,3 +139,13 @@ In vue js component code is present in .vue file and can contain <template>, <sc
 Just like in react in order to make component resuable we make it dynamic using props and using props a same component can show different ui, Same props can be used in vue js as well using options API. 
 
 14. Just like in react we have Context Api to avoid prop drilling for deeply nested components and directly pass data to them in vue we have Provide and Inject for the same. 
+
+15. So far using props we can pass data from parent to child component but sometime we want to pass data from child to parent component as well for this we use custom events in vue.
+
+16. Just like we can pass HTML, text or components as a prop from parent to child in react using .children in vue to acheive same we use SLOTS.
+
+17. Just like in react we have 2 types of styling global (which is available to whole application) and local scopped (which is available to that component only). Same concept is available in vue js as well.
+
+18. Sometime we need to dynamically mount and unmount component from ui ex tab ui element where based on tab click we show different ui. In vue we accomplish this using DYNAMIC COMPONENT. 
+
+19. Just like in react to render a component outside its DOM hierarchy we have PORTAL in vue we have TELEPORT.
