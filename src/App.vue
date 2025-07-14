@@ -99,7 +99,10 @@
   <!-- <TeleportComponent /> -->
 
   <!-- HTTP REQUEST -->
-  <HttpRequest/>
+  <!-- <HttpRequest/> -->
+
+  <!-- LIFECYCLE HOOKS -->
+  <LifeCycleHooks/>
 
 </template>
 
@@ -122,7 +125,8 @@
 // import ComponentStyles from './components/20-Component Styles.vue'
 // import DynamicComponent from './components/21-Dynamic Component.vue'
 // import TeleportComponent from './components/25-Teleport Component.vue'
-import HttpRequest from './components/26-Http Request.vue'
+// import HttpRequest from './components/26-Http Request.vue'
+import LifeCycleHooks from './components/27-Lifecycle Hooks.vue'
 export default {
   name: 'App',
 
@@ -146,7 +150,8 @@ export default {
     // ComponentStyles,
     // DynamicComponent,
     // TeleportComponent,
-    HttpRequest
+    // HttpRequest,
+    LifeCycleHooks
   },
   data() {
     return {
