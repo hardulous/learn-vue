@@ -149,3 +149,5 @@ Just like in react in order to make component resuable we make it dynamic using 
 18. Sometime we need to dynamically mount and unmount component from ui ex tab ui element where based on tab click we show different ui. In vue we accomplish this using DYNAMIC COMPONENT. 
 
 19. Just like in react to render a component outside its DOM hierarchy we have PORTAL in vue we have TELEPORT.
+
+20. In a web application we always need to make request to the server to get some data based on user interaction, But we know vue is a framework to build user interface it is not concerned with making http request so for this we have to rely on HTTP LIBRARY like axios. 

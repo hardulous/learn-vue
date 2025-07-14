@@ -11,7 +11,12 @@
     <noscript>
       <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>
+
+    <!-- Our whole vue application will be mounted inside this div -->
     <div id="app"></div>
+
+    <!-- Using teleport we will mount a part of ui in this div -->
+    <div id="teleport-app"></div>
     <!-- built files will be auto injected -->
   </body>
 </html>

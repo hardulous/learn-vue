@@ -96,7 +96,10 @@
   <!-- <DynamicComponent/> -->
 
   <!-- TELEPORT COMPONENT -->
-  <TeleportComponent />
+  <!-- <TeleportComponent /> -->
+
+  <!-- HTTP REQUEST -->
+  <HttpRequest/>
 
 </template>
 
@@ -118,7 +121,8 @@
 // import SlotsProps from './components/19-Slot Props.vue'
 // import ComponentStyles from './components/20-Component Styles.vue'
 // import DynamicComponent from './components/21-Dynamic Component.vue'
-import TeleportComponent from './components/25-Teleport Component.vue'
+// import TeleportComponent from './components/25-Teleport Component.vue'
+import HttpRequest from './components/26-Http Request.vue'
 export default {
   name: 'App',
 
@@ -141,7 +145,8 @@ export default {
     // SlotsProps,
     // ComponentStyles,
     // DynamicComponent,
-    TeleportComponent
+    // TeleportComponent,
+    HttpRequest
   },
   data() {
     return {
