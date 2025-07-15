@@ -153,3 +153,7 @@ Just like in react in order to make component resuable we make it dynamic using 
 20. In a web application we always need to make request to the server to get some data based on user interaction, But we know vue is a framework to build user interface it is not concerned with making http request so for this we have to rely on HTTP LIBRARY like axios. 
 
 21. Just like in react a component goes through a various phases in its lifecycle like mounted, updated, unmounted etc, Same lifecycle also present in vue js component. 
+
+22. Just like in react we have useRef() hook to create a mutable object which is used to store a DOM node inside of it in vue we have TEMPLATE REFS that do the same. 
+
+23. Just like in react we have custom hooks, high order component, render prop method etc to extract out reusable logic for use in vue we have MIXINS.  

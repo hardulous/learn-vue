@@ -102,7 +102,14 @@
   <!-- <HttpRequest/> -->
 
   <!-- LIFECYCLE HOOKS -->
-  <LifeCycleHooks/>
+  <!-- <LifeCycleHooks/> -->
+
+  <!-- TEMPLATE REFS -->
+  <!-- <TemplateRef /> -->
+
+  <!-- MIXINS -->
+  <Mixins />
+
 
 </template>
 
@@ -126,7 +133,9 @@
 // import DynamicComponent from './components/21-Dynamic Component.vue'
 // import TeleportComponent from './components/25-Teleport Component.vue'
 // import HttpRequest from './components/26-Http Request.vue'
-import LifeCycleHooks from './components/27-Lifecycle Hooks.vue'
+// import LifeCycleHooks from './components/27-Lifecycle Hooks.vue'
+// import TemplateRef from './components/29-Template Refs.vue'
+import Mixins from './components/30-Mixins.vue'
 export default {
   name: 'App',
 
@@ -151,7 +160,9 @@ export default {
     // DynamicComponent,
     // TeleportComponent,
     // HttpRequest,
-    LifeCycleHooks
+    // LifeCycleHooks,
+    // TemplateRef,
+    Mixins
   },
   data() {
     return {

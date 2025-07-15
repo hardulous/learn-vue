@@ -67,6 +67,10 @@ export default {
                 console.log(err)
             })
         }
+    },
+    // Get request on page load
+    created() {
+        this.getPosts() 
     }
 }
 </script>
@@ -75,6 +79,8 @@ export default {
 
 To stimulate http get request we will use JSON PLACEHOLDER API, Since we need to render data in ui on click of button so we will create a method for it. 
 
-To stimulate http post request we will again use JSON PLACEHOLDER API, This time we will make post request and pass user input to backend api using 'v-model' directive. 
+To stimulate http post request we will again use JSON PLACEHOLDER API, This time we will make post request and pass user input to backend api using 'v-model' directive.
+
+Now we want to fetch data when page loaded not on button click so for this we will use a lifecycle method called 'created()'. 
 
 -->
