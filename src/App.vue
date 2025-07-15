@@ -108,34 +108,39 @@
   <!-- <TemplateRef /> -->
 
   <!-- MIXINS -->
-  <Mixins />
+  <!-- <Mixins /> -->
+
+  <!-- COMPOSITION API -->
+  <!-- REF -->
+  <Ref/>
 
 
 </template>
 
 <script>
-// import BindingData from './components/1-Binding Data.vue'
-// import ConditionalRendering from './components/2-Conditional Rendering.vue'
-// import ListRendering from './components/3-List Rendering.vue';
-// import MethodsAndEvents from './components/4-Methods And Events.vue';
-// import FormHandling from './components/5-Form Handling.vue';
-// import Modifiers from './components/6-Modifiers.vue';
-// import ComputedProperties from './components/7-Computed Properties.vue';
-// import Watcher from './components/8-Watcher.vue';
-// import Greet from './components/9-Greet.vue';
-// import NonPropAttribute from './components/10-Non Props Attribute.vue'
-// import ProvideAndInject from './components/11-Provide And Inject.vue'
-// import CustomComponent from './components/15-Component Events.vue'
-// import CustomComponentVModel from './components/17-Custom Component V-Model.vue'
-// import Slots from './components/18-Slots.vue'
-// import SlotsProps from './components/19-Slot Props.vue'
-// import ComponentStyles from './components/20-Component Styles.vue'
-// import DynamicComponent from './components/21-Dynamic Component.vue'
-// import TeleportComponent from './components/25-Teleport Component.vue'
-// import HttpRequest from './components/26-Http Request.vue'
-// import LifeCycleHooks from './components/27-Lifecycle Hooks.vue'
-// import TemplateRef from './components/29-Template Refs.vue'
-import Mixins from './components/30-Mixins.vue'
+// import BindingData from './components/Options Api/1-Binding Data.vue'
+// import ConditionalRendering from './components/Options Api/2-Conditional Rendering.vue'
+// import ListRendering from './components/Options Api/3-List Rendering.vue';
+// import MethodsAndEvents from './components/Options Api/4-Methods And Events.vue';
+// import FormHandling from './components/Options Api/5-Form Handling.vue';
+// import Modifiers from './components/Options Api/6-Modifiers.vue';
+// import ComputedProperties from './components/Options Api/7-Computed Properties.vue';
+// import Watcher from './components/Options Api/8-Watcher.vue';
+// import Greet from './components/Options Api/9-Greet.vue';
+// import NonPropAttribute from './components/Options Api/10-Non Props Attribute.vue'
+// import ProvideAndInject from './components/Options Api/11-Provide And Inject.vue'
+// import CustomComponent from './components/Options Api/15-Component Events.vue'
+// import CustomComponentVModel from './components/Options Api/17-Custom Component V-Model.vue'
+// import Slots from './components/Options Api/18-Slots.vue'
+// import SlotsProps from './components/Options Api/19-Slot Props.vue'
+// import ComponentStyles from './components/Options Api/20-Component Styles.vue'
+// import DynamicComponent from './components/Options Api/21-Dynamic Component.vue'
+// import TeleportComponent from './components/Options Api/25-Teleport Component.vue'
+// import HttpRequest from './components/Options Api/26-Http Request.vue'
+// import LifeCycleHooks from './components/Options Api/27-Lifecycle Hooks.vue'
+// import TemplateRef from './components/Options Api/29-Template Refs.vue'
+// import Mixins from './components/Options Api/30-Mixins.vue'
+import Ref from './components/Composition Api/1-Ref.vue';
 export default {
   name: 'App',
 
@@ -162,7 +167,8 @@ export default {
     // HttpRequest,
     // LifeCycleHooks,
     // TemplateRef,
-    Mixins
+    // Mixins,
+    Ref
   },
   data() {
     return {

@@ -157,3 +157,27 @@ Just like in react in order to make component resuable we make it dynamic using 
 22. Just like in react we have useRef() hook to create a mutable object which is used to store a DOM node inside of it in vue we have TEMPLATE REFS that do the same. 
 
 23. Just like in react we have custom hooks, high order component, render prop method etc to extract out reusable logic for use in vue we have MIXINS.  
+
+24. Here so far whatever component defination we applied in <script> block is the part of OPTIONS API which is legacy feature for vue 2 but starting with vue 3 we now have COMPOSITION API. 
+
+COMPOSITION API is a feature in vue 3 which gives us another way to write our components defination, More specifically another way to write <script> block of the component. 
+
+These data(), computed properties, methods, watchers and lifecycle hooks are all part of OPTIONS API. 
+
+Just like in react we have CLASS COMPONENT (LEGACY WAY) VS FUNCTION COMPONENT (MODERN WAY) in vue we have OPTIONS API (LEGACY WAY) VS COMPOSITION API (MODERN WAY). When creating a component we can use either of the 2 options. 
+
+REASON FOR NEED OF COMPOSITION API ::
+
+ (a). Vue projects became hard to manage as they grew in size and complexity. With OPTIONS API we have to organized our components by following options rules such as data(), computed properties, methods etc, Instead of organizing them based on logic and feature which makes it hard to read through a large and complex component file. 
+
+ A change to one feature in lets say data() have to apply change to other options like methods, computed properties etc related to that data.
+
+ (b). Since logic related to a feature is split across multiple options reusing them become difficult.     
+
+For above issue COMPOSITION API allows us to encapsulate one piece of functionality / feature and code related to them together so we can use it in different components throughout the application. 
+
+The props and cons is similar to pros and cons of using FUNCTIONAL COMPONENT OVER CLASS COMPONENT in react. 
+
+The good thing in vue 3 is OPTIONS AND COMPOSITION API can be used together in a single component file. 
+
+25. In 
