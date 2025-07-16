@@ -115,8 +115,19 @@
   <!-- <Ref/> -->
 
   <!-- REACTIVE -->
-  <Reactive />
+  <!-- <Reactive /> -->
 
+  <!-- REACTIVITY AND TOREFS -->
+  <!-- <ReactivityToRefs/> -->
+
+  <!-- METHODS -->
+  <!-- <Methods/> -->
+
+  <!-- V-MODEL -->
+  <!-- <VModel/> -->
+
+  <!-- COMPUTED PROPERTY -->
+  <ComputedProperty />
 
 </template>
 
@@ -144,7 +155,11 @@
 // import TemplateRef from './components/Options Api/29-Template Refs.vue'
 // import Mixins from './components/Options Api/30-Mixins.vue'
 // import Ref from './components/Composition Api/1-Ref.vue';
-import Reactive from './components/Composition Api/2-Reactive.vue'
+// import Reactive from './components/Composition Api/2-Reactive.vue'
+// import ReactivityToRefs from './components/Composition Api/3-Reactivity And toRefs.vue'
+// import Methods from './components/Composition Api/4-Methods.vue';
+// import VModel from './components/Composition Api/5-V-model.vue';
+import ComputedProperty from './components/Composition Api/6-Computed Property.vue';
 export default {
   name: 'App',
 
@@ -173,7 +188,11 @@ export default {
     // TemplateRef,
     // Mixins,
     // Ref,
-    Reactive
+    // Reactive,
+    // ReactivityToRefs,
+    // Methods,
+    // VModel,
+    ComputedProperty
   },
   data() {
     return {

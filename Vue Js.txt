@@ -180,4 +180,4 @@ The props and cons is similar to pros and cons of using FUNCTIONAL COMPONENT OVE
 
 The good thing in vue 3 is OPTIONS AND COMPOSITION API can be used together in a single component file. 
 
-25. In 
+25. 
