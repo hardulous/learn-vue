@@ -112,7 +112,10 @@
 
   <!-- COMPOSITION API -->
   <!-- REF -->
-  <Ref/>
+  <!-- <Ref/> -->
+
+  <!-- REACTIVE -->
+  <Reactive />
 
 
 </template>
@@ -140,7 +143,8 @@
 // import LifeCycleHooks from './components/Options Api/27-Lifecycle Hooks.vue'
 // import TemplateRef from './components/Options Api/29-Template Refs.vue'
 // import Mixins from './components/Options Api/30-Mixins.vue'
-import Ref from './components/Composition Api/1-Ref.vue';
+// import Ref from './components/Composition Api/1-Ref.vue';
+import Reactive from './components/Composition Api/2-Reactive.vue'
 export default {
   name: 'App',
 
@@ -168,7 +172,8 @@ export default {
     // LifeCycleHooks,
     // TemplateRef,
     // Mixins,
-    Ref
+    // Ref,
+    Reactive
   },
   data() {
     return {

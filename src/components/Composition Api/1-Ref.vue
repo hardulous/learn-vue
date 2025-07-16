@@ -3,6 +3,10 @@
   <h2>COMPOSITION API REF</h2>
   <h3>OPTION API NAME - {{ o_firstName }}</h3>
   <h3>COMPOSITION API NAME - {{ c_firstName }}</h3>
+  <button @click="()=>{
+    o_firstName= 'Mayank'
+    c_firstName= 'Tarun'
+  }">CHANGE NAME</button>
 </template>
 
 <script>
