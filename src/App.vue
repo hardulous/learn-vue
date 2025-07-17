@@ -127,7 +127,13 @@
   <!-- <VModel/> -->
 
   <!-- COMPUTED PROPERTY -->
-  <ComputedProperty />
+  <!-- <ComputedProperty /> -->
+
+  <!-- WATCHER -->
+  <!-- <Watcher/> -->
+
+  <!-- PROVIDE AND INJECT -->
+  <ProvideAndInject/>
 
 </template>
 
@@ -159,7 +165,9 @@
 // import ReactivityToRefs from './components/Composition Api/3-Reactivity And toRefs.vue'
 // import Methods from './components/Composition Api/4-Methods.vue';
 // import VModel from './components/Composition Api/5-V-model.vue';
-import ComputedProperty from './components/Composition Api/6-Computed Property.vue';
+// import ComputedProperty from './components/Composition Api/6-Computed Property.vue';
+// import Watcher from './components/Composition Api/7-Watchers.vue'
+import ProvideAndInject from './components/Composition Api/8-Provide And Inject.vue';
 export default {
   name: 'App',
 
@@ -192,7 +200,9 @@ export default {
     // ReactivityToRefs,
     // Methods,
     // VModel,
-    ComputedProperty
+    // ComputedProperty,
+    // Watcher,
+    ProvideAndInject
   },
   data() {
     return {
