@@ -133,7 +133,19 @@
   <!-- <Watcher/> -->
 
   <!-- PROVIDE AND INJECT -->
-  <ProvideAndInject/>
+  <!-- <ProvideAndInject/> -->
+  
+  <!-- LIFECYCLE HOOKS -->
+  <!-- <LifeCycleHooks/> -->
+
+  <!-- TEMPLATE REFS -->
+  <!-- <TemplateRefs/> -->
+
+  <!-- PROPS -->
+  <!-- <PropsChild/> -->
+
+  <!-- MIXINS -->
+  <Mixins/>
 
 </template>
 
@@ -167,7 +179,11 @@
 // import VModel from './components/Composition Api/5-V-model.vue';
 // import ComputedProperty from './components/Composition Api/6-Computed Property.vue';
 // import Watcher from './components/Composition Api/7-Watchers.vue'
-import ProvideAndInject from './components/Composition Api/8-Provide And Inject.vue';
+// import ProvideAndInject from './components/Composition Api/8-Provide And Inject.vue';
+// import LifeCycleHooks from './components/Composition Api/12-Lifecycle Hooks.vue'
+// import TemplateRefs from './components/Composition Api/14-Template Refs.vue'
+// import PropsChild from './components/Composition Api/15-Props.vue'
+import Mixins from './components/Composition Api/17-Mixins.vue'
 export default {
   name: 'App',
 
@@ -202,7 +218,11 @@ export default {
     // VModel,
     // ComputedProperty,
     // Watcher,
-    ProvideAndInject
+    // ProvideAndInject,
+    // LifeCycleHooks,
+    // TemplateRefs,
+    // PropsChild,
+    Mixins
   },
   data() {
     return {

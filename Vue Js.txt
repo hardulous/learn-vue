@@ -180,4 +180,4 @@ The props and cons is similar to pros and cons of using FUNCTIONAL COMPONENT OVE
 
 The good thing in vue 3 is OPTIONS AND COMPOSITION API can be used together in a single component file. 
 
-25. 
+25. To know how to deploy VUE.JS app on netlify watch 'https://www.youtube.com/watch?v=qduayAPJK9A&list=PLC3y8-rFHvwgeQIfSDtEGVvvSEPDkL_1f&index=66'
