@@ -1,0 +1,20 @@
+###### PINIA #######
+
+Pinia is the official state management library for Vue.js 3, and it's the recommended replacement for Vuex. Think of Pinia as the central place to store and manage your app’s data (like user info, cart data, settings, etc.), which can be shared between multiple components, Just like for REACT have 'redux'.
+
+
+##### WHY USE PINIA ######
+
+In Vue, component state is local. But when multiple components need to share data (like the user login state), instead of props drilling we need global state management for ease of development. That’s where Pinia comes in
+
+
+###### INSTALLING #######
+
+Install pinia by command "npm install pinia". After that register it as a 'middleware' in our vue application using 'app.use()' which is used to install plugins or libraries into our vue app. 
+
+
+###### STORE #######
+
+A Store in pinia is an entity holding state and business logic that isn't bound to your Component tree. In other words, it hosts global state. It's a bit like a component that is always there and that everybody can read off and write to. It has three concepts, the state, getters and actions and it's safe to assume these concepts are the equivalent of data, computed and methods in components
+
+##### 
