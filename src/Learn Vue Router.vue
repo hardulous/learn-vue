@@ -25,11 +25,25 @@
   <RouterView name="sideBar"/>
   <RouterView name="postBar"/>
 
+  <!-- Programatic Navigation -->
+  <button @click="router.push('/')">Home</button>
+  <button @click="router.push({path:'/about'})">About</button>
+  <!-- Programatic Navigate To Name Route -->
+  <button @click="router.push({name:'contact'})">Contact</button>
+
 </template>
 
 <script>
+import { useRouter } from 'vue-router';
+
 export default {
-    name: 'VUE ROUTER'
+    name: 'VUE ROUTER',
+    setup(){
+      const router = useRouter()
+      return {
+        router
+      }
+    }
 }
 </script>
 
@@ -106,5 +120,7 @@ NOTE :: We can change these class names globally using config object passed in '
 Here in named route :: <RouterLink :to="{name:'home'}">Home</RouterLink>, It means the router will match the name of the route rather than its path and shos component equivalent to that route's name. 
 
 Sometime we need to pass props to route component lets say when we want to use route parameter etc inside component directly instead of relying on useRoute() hook or this.$route object for it. 
+
+Sometime we need to do programatic navigation like on completion of task and api call for this we use 'router' instance from userRouter() hook. 
 
 -->

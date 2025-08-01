@@ -92,3 +92,15 @@ A named route is a route with an assigned name property to it, which allows you 
  3. Prevents us from having a typo in the url
 
 Sometime we need to render multiple components in the same route, ex :: Creating a layout with sideBar, header, footer and main view. For this we can have multiple '<RouterView/>' component with unique name.
+
+
+######### ROUTE MATCHING SYNTAX ###########
+
+In Vue Router, route matching syntax is based on path patterns. These define which routes match which URLs. Most applications will use static routes like /about and dynamic routes like /users/:userId but vue router can also use 'CUSTOM REGEX PATTERN'. WHY IT IS NEEDED :: 
+
+Image two routes '/:orderId' and '/:productName' both will match the exact same URLs, so to differentiate them one way is to add a static section to the path like '/o/:orderId' and '/p/:productName'. But in same scenarios we don't want to add that static section '/o' and '/p' but we know that orderId will always we number and productName can be anything for this we can use 'CUSTOM REGEX AS A PATH'.
+
+
+###### PROGRAMATIC ROUTING #######
+
+So far we did navigation using <RouterLink/> component but we can do programatic navigation using router object from useRouter() hook. 
