@@ -17,4 +17,29 @@ Install pinia by command "npm install pinia". After that register it as a 'middl
 
 A Store in pinia is an entity holding state and business logic that isn't bound to your Component tree. In other words, it hosts global state. It's a bit like a component that is always there and that everybody can read off and write to. It has three concepts, the state, getters and actions and it's safe to assume these concepts are the equivalent of data, computed and methods in components
 
-##### 
+##### GETTERS ######
+
+Getters are exactly the equivalent of computed values for the state of a Store. Think of getters as computed properties for the store. They are used to derive data from the state present in the store.
+
+###### ACTIONS #######
+
+Actions are the equivalent of methods in components where business logic related to modifying the state is present similar to REDUCER in REACT they can be asyncronous as well to perform api call inside them. 
+
+###### ASYNC ACTIONS #######
+
+In pinia actions can be async as well which is useful when you want to perform asynchronous operations like fetching data from an API, using setTimeout / setInterval, Waiting for a promise etc.
+
+To stimualte API call we will use JSON SERVER which will spin up a local development server in which we can configure API to interact with our DATABASE.json file.
+
+Install JSON-SERVER globally by command 'npm install -g json-server' and then run 'json-server <path of .json file> ' to start local server. 
+
+###### PINIA WITH DEVTOOLS #######
+
+The vue.js devtools can be used for debugging pinia as well just like redux devtools of react. 
+
+###### RESETTING STATE & STORETOREFS #######
+
+Sometime in pinua we need to reset the global state to initial value for which we either do it by pinia special method 'store.$reset()' or do it manually by defining a reset 'action' in store defination. 
+
+Just like data value loses their reactivity when destructured them the store's state also also loses their reactivity when destructured them for which we use 'storeToRefs()'.
+

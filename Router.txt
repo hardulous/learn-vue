@@ -1,0 +1,94 @@
+######## VUE ROUTER #########
+
+Vue Router is the official routing library for Vue.js, enabling you to build Single Page Applications (SPA) with Vue. In an SPA, you don’t reload the whole page when navigating everything is control by client side js. 
+
+It provide us features like :: 
+
+(a). Nested routes mapping
+(b). Dynamic Routing
+(c). Modular, component-based router configuration
+(d). Route params, query, wildcards
+(e). View transition effects powered by Vue.js' transition system
+(f). Fine-grained navigation control
+(g). Links with automatic active CSS classes
+(h). HTML5 history mode or hash mode
+(i). Customizable Scroll Behavior
+Proper encoding for URLs
+
+
+###### INSTALLATION ######
+
+Install vue router by command 'npm install vue-router@4'. 
+
+###### FOLDER STRUCTURE ######
+
+The recommended folder structure for vue-router is to create a 'router' directory that contain 'router/index.js' file which contain vue-router initial configuration. 
+
+Then a 'views' directory contain route target component or page to be shown in the UI based on route's path.
+
+Then a 'components' directory that contain common components like Navbar, Footer, Card etc. 
+
+At last in 'App.vue' is the place where we will define layout of our application along with navigation rule. This app component will then be mounted in our vue app in 'Main.js' file. 
+
+
+####### createRouter() ########
+
+It creates a router instance that can be used by our vue app using app.use() as a middileware. It accept arguments like :: 
+
+ (a). history => A mandatory argument which defines history implementation used by the router. It can be either 'createWebHistory()' or 'createWebHashHistory()'.
+
+ (b). routes => A mandatory argument which is initial list of routes managed by the router. 
+
+
+####### createWebHistory() vs createWebHashHistory() #######
+
+createWebHistory() and createWebHashHistory() are used to configure how the router manages the URL history. 
+
+createWebHistory() uses HTML5 history API like pushState, replaceState and generate clean URL like /about, /contact etc. It requires server-side configuration ( like nginx ) to handle route fallback and always return index.html on refresh. 
+
+createWebHashHistory() uses the hash '#' in the url for navigation and create hash history. It is useful for web application with no host ex file:// or when configuring a server to handle any URL is not possible. 
+
+
+###### DYNAMIC ROUTE ######
+
+In vue-router dynamic routes allow us to have dynamic segment or value in the route url path which we call param and match a route component for it. EX :: /users/:id , /posts/:id etc. 
+
+In real-world app we need to access this dynamic param value to make api call for this we use :: 
+
+ In Options API :: We use special property called 'this.$route' know as current route location instance which contains 'params' property inside of it 
+
+ In Composition API :: We use 'useRoute()' hook that returns instance similar to 'this.$route'. 
+
+ Both are similar to REACT useLocation() hook. 
+
+In real world we also need to perform programatic navigation for which we can use :: 
+
+ In Options API :: We use special property called 'this.$router' know as router instance which contains many helper methods for navigation 
+
+ In Composition API :: We use 'useRouter()' hook that returns instance similar to 'this.$router'. 
+
+@@@@@ 
+
+NOTE :: The route object is reactive in nature so any of its properties can be watched by watcher and we should avoid watching the whole route object and watch only the param we are expecting to change. Else it can cause unecessary re-renders.  
+
+@@@@@
+
+
+###### Page Not Found & Redirect & Alias ######
+
+In web-app we also need to provide 404 page for a route that doesn't exist for this we use ':pathMatch(.*)*' which is a special catch-all param for 404.
+
+Sometime in web-app we want to redirect user to a different route based on current route ex, When user hit '/home' we will redirect him to '/' route. 
+
+An alias is an alternate path that maps to an existing route without changing the URL to the actual path. 
+
+
+######## Named Route & Named View #########
+
+A named route is a route with an assigned name property to it, which allows you to navigate programmatically or declaratively without hardcoding the path or url. It has advantages like :: 
+
+ 1. No hardcoded URLs
+ 2. Automatic encoding/decoding of params
+ 3. Prevents us from having a typo in the url
+
+Sometime we need to render multiple components in the same route, ex :: Creating a layout with sideBar, header, footer and main view. For this we can have multiple '<RouterView/>' component with unique name.

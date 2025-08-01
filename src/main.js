@@ -1,13 +1,17 @@
 import { createApp } from 'vue'
 // import App from './Learn Vue.vue'
-import App2 from './Learn Pinia.vue'
-import { createPinia } from 'pinia'
+// import App2 from './Learn Pinia.vue'
+import App3 from './Learn Vue Router.vue'
+import router from './components/Vue Router/router'
+// import { createPinia } from 'pinia'
 
 // createApp(App).mount('#app')  // Here creating vue application instance from root component App and mounting it in html element with id app
 
-const pinia = createPinia() // Creates a Pinia instance so pinia and its features can be used by the application
+// const pinia = createPinia() // Creates a Pinia instance so pinia and its features can be used by the application
 
-createApp(App2).use(pinia).mount('#app')  // Here our app is using pinia library and mounted on DOM node with id app. 
+// createApp(App2).use(pinia).mount('#app')  // Here our app is using pinia library and mounted on DOM node with id app. 
+
+createApp(App3).use(router).mount('#app') // Here our app is using vue-router library and mounted on DOM node with id app. 
 
 /*
 
@@ -26,6 +30,5 @@ createApp(App2).use(pinia).mount('#app')  // Here our app is using pinia library
 
 6. createPinia() is a method provided by the Pinia library in Vue 3 that creates a Pinia instance that sets up a global state manager that can be used throughout our app to Register and access multiple stores, Manage shared state, Support devtools, plugins, SSR, etc.
 
-7. 
 
  */
