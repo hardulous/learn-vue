@@ -104,3 +104,31 @@ Image two routes '/:orderId' and '/:productName' both will match the exact same 
 ###### PROGRAMATIC ROUTING #######
 
 So far we did navigation using <RouterLink/> component but we can do programatic navigation using router object from useRouter() hook. 
+
+
+###### NESTED ROUTE #######
+
+Nested routes (also called child routes) let you define routes inside other routes that is allow user to navigate between child route in a parent route. 
+
+
+###### NAVIGATION GUARDS ########
+
+Navigation guards provided by vue router are primarly used to guard navigation either by redirecting it or cancelling it. They are functions that let you hook into navigation process to run logic before, during or after navigation to a route is completed. 
+
+There a number of ways to hook into the route navigation process :: 
+
+ (a). Globally => Apply to all routes globally 
+
+ (b). Per-Route => Apply to specific route in route defination
+
+ (c). In-Component => Apply to specific component using a lifecycle method 
+
+
+####### ROUTE META FIELDS #########
+
+In vue-router to attach arbitary information to route object like transition-name, who can access this route and any data-type value we can use 'meta' property which is an object of properties with any type of value in it and can be accessed either in route object of 'useRoute()' or in navigation guards. 
+
+
+######## SCROLL BEHAVIOUR #########
+
+

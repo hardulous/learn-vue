@@ -13,6 +13,65 @@ import router from './components/Vue Router/router'
 
 createApp(App3).use(router).mount('#app') // Here our app is using vue-router library and mounted on DOM node with id app. 
 
+
+/*  
+
+Global Before Guards, Run before any route navigation is triggered. We can register it using 'router.beforeEach()'. 
+
+If it returns false means cancel the current navigation. And if return a route location like like route or named route then redirect to it. And can call router.push() method for redirect as well. 
+
+The calback function accept argument like :: 
+
+ (a). to => The target / destination route object
+
+ (b). from => The current / source route object 
+
+ (c). next (Optional) => It is a callback function used to control the navigation flow. You call next() to either allow 'next()', redirect 'next('/login')', or cancel the navigation 'next(false)'. But call it only one time else get error.
+
+It can be async as well . Perfect place to perform authentication, permission etc. 
+
+*/
+
+// router.beforeEach((to, from)=>{
+//     console.log('Global beforeEach Called')
+//     console.log('From', from)
+//     console.log('To', to)
+
+//     // Cancel the navigation result in nothing will be shown in <RouterView/> component 
+//     // return false 
+
+//     // Redirect to '/about' when user try to navigate to '/'
+//     if(to.path === "/") router.push("/about")
+// })
+
+/*
+
+Global Resolve Guards, Called after all beforeEach and in-component guards are resolved, but before final navigation is finalized
+
+Perfect place to show loading spinner while guards are done resolving. 
+
+*/
+
+// router.beforeResolve((to, from)=>{
+//     console.log('Global beforeResolve Called')
+//     console.log('From', from)
+//     console.log('To', to)
+// })
+
+/*
+
+Global After Each Hook, Runs after navigation to destination route is completed. Unlike before guards this hook do not get a next() function and cannot affect the navigation. 
+
+Useful for analytics, changing the title of the page etc. 
+
+*/
+
+// router.afterEach((to, from)=>{
+//     console.log('Global After Hook Called')
+//     console.log('From', from)
+//     console.log('To', to)
+// })
+
 /*
 
 1. This is the entry point of vue js application similar to in react we have index.js file

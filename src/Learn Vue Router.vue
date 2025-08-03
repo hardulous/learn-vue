@@ -1,5 +1,5 @@
 <template>
-  
+
   <h2>VUE ROUTER</h2>
 
   <!-- Navigation route links -->
@@ -12,24 +12,37 @@
 
   <!-- Named route links -->
   <nav>
-    <RouterLink :to="{name:'home'}">Home</RouterLink>
-    <RouterLink :to="{name:'about'}">About</RouterLink>
-    <RouterLink :to="{name:'contact'}">Contact</RouterLink>
-    <RouterLink :to="{name:'posts'}">Posts</RouterLink>
+    <RouterLink :to="{ name: 'home' }">Home</RouterLink>
+    <RouterLink :to="{ name: 'about' }">About</RouterLink>
+    <RouterLink :to="{ name: 'contact' }">Contact</RouterLink>
+    <RouterLink :to="{ name: 'posts' }">Posts</RouterLink>
+
+    <!-- Nested Route -->
+    <RouterLink :to="{path:'/user/aman'}">User Aman</RouterLink>
+    <!-- <RouterLink :to="{name:'userHome', params: {id: 'acey'}}">Named User Aman</RouterLink> -->
+
+    <RouterLink :to="{path: '/login'}">Login</RouterLink>
   </nav>
 
   <!-- Placeholder for route component -->
-  <RouterView/>
+  <RouterView />
 
   <!-- RouterView with different name -->
-  <RouterView name="sideBar"/>
-  <RouterView name="postBar"/>
+  <RouterView name="sideBar" />
+  <RouterView name="postBar" />
 
   <!-- Programatic Navigation -->
   <button @click="router.push('/')">Home</button>
-  <button @click="router.push({path:'/about'})">About</button>
+  <button @click="router.push({ path: '/about' })">About</button>
   <!-- Programatic Navigate To Name Route -->
-  <button @click="router.push({name:'contact'})">Contact</button>
+  <button @click="router.push({ name: 'contact' })">Contact</button>
+  <!-- Programatic Navigate With Params -->
+  <button @click="router.push('posts/1')">Post-1</button>
+  <button @click="router.push({ name: 'product', params: { prod: [1, 22, 55] } })">Product</button>
+  <!-- Programatic Navigate With Replace -->
+  <button @click="router.replace('/posts')">Posts</button>
+  <!-- Programatic Go Back -->
+  <button @click="router.go(-1)">Back</button>
 
 </template>
 
@@ -37,46 +50,44 @@
 import { useRouter } from 'vue-router';
 
 export default {
-    name: 'VUE ROUTER',
-    setup(){
-      const router = useRouter()
-      return {
-        router
-      }
+  name: 'VUE ROUTER',
+  setup() {
+    const router = useRouter()
+    return {
+      router
     }
+  }
 }
 </script>
 
 <style>
-
 #app {
-    font-family: Avenir, Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-align: center;
-    color: #2c3e50;
-    margin-top: 60px;
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
 }
 
-nav{
-    font-size: 24px;
-    border-bottom: 1px solid coral;
+nav {
+  font-size: 24px;
+  border-bottom: 1px solid coral;
 }
 
-nav a{
-    display: inline-block;
-    padding: 5px 10px;
-    text-decoration: none;
-    margin: 10px;
-    border-radius: 10px;
-    border-bottom: 1px solid coral;
+nav a {
+  display: inline-block;
+  padding: 5px 10px;
+  text-decoration: none;
+  margin: 10px;
+  border-radius: 10px;
+  border-bottom: 1px solid coral;
 }
 
-nav a.router-link-exact-active{
-    background: coral;
-    color: #fff
+nav a.router-link-exact-active {
+  background: coral;
+  color: #fff
 }
-
 </style>
 
 <!-- 
@@ -105,7 +116,7 @@ Current route: /about/team → ✅ router-link-active is applied. But not router
 
 'router-link-exact-active' is a default class applied to the <RouterLink/> only when the route exactly matches the 'to' value based on exact match not fuzzy. EX ::
 
-<RouterLink to="/about">About</RouterLink>
+<RouterLink to="/about">About</RouterLink>777
 
 Current route: /about → ✅ router-link-exact-active is applied.
 
@@ -122,5 +133,9 @@ Here in named route :: <RouterLink :to="{name:'home'}">Home</RouterLink>, It mea
 Sometime we need to pass props to route component lets say when we want to use route parameter etc inside component directly instead of relying on useRoute() hook or this.$route object for it. 
 
 Sometime we need to do programatic navigation like on completion of task and api call for this we use 'router' instance from userRouter() hook. 
+
+The router.push() add new route in the history stack but with router.replace() it will replace the current route from history stack means cannot go back to previous route using back button. 
+
+We can also traverse in history stack using 'router.go(integer)' This method takes a single integer as parameter that indicates by how many steps to go forward +ve or go backward -ve in the history stack, similar to window.history.go(n)
 
 -->
