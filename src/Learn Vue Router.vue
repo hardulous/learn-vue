@@ -22,6 +22,10 @@
     <!-- <RouterLink :to="{name:'userHome', params: {id: 'acey'}}">Named User Aman</RouterLink> -->
 
     <RouterLink :to="{path: '/login'}">Login</RouterLink>
+
+    <!-- Scroll Behaviour Ui -->
+    <RouterLink :to="{path: '/scroll1'}">Scroll-1</RouterLink>
+    <RouterLink :to="{path: '/scroll2'}">Scroll-2</RouterLink>
   </nav>
 
   <!-- Placeholder for route component -->

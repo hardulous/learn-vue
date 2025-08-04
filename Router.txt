@@ -131,4 +131,16 @@ In vue-router to attach arbitary information to route object like transition-nam
 
 ######## SCROLL BEHAVIOUR #########
 
+In client-side routing, we may want to scroll to top when navigating to a new route, or preserve the scrolling position of already loaded route. For this vue provide 'scrollBehavior' property to customize this scrolling behavior. 
+
+
+######## LAZY LOADING ROUTING ########
+
+Just like in react we have 'React.Lazy()' to dynamic import the route component and download their chunk only when user navigate to them to increase initial page load time of the application. In vue we can also use thie behavior by dynamic import.
+
+Use Lazy Loading for ::
+
+1. Routes/components not needed immediately
+2. Heavy pages (charts, settings, dashboards)
+3. Admin or nested feature modules
 
